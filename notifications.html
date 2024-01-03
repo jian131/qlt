@@ -78,7 +78,35 @@
             
           </tbody>
         </table>
-        <button>Gửi thông báo mới</button>
+        <button onclick="showPopupThemTB()">Thêm thông báo mới</button>
+        <div id="popupThemTB" class="popup"></div>
     </div>
+
+    <script>
+      function showPopupThemTB() {
+
+document.getElementById("popupThemTB").innerHTML = `
+  <div class="login-form">
+    <h3>Thêm thông báo mới</h3>
+    
+    <input placeholder="Nội dung">
+    
+    <button onclick="themTB()">Gửi</button>
+    <button onclick="dongForm()">Đóng</button>    
+  </div>
+`;
+
+document.getElementById("popupThemTB").style.display = "block";
+
+}
+
+function dongForm() {
+document.getElementById("popupThemTB").style.display = "none";
+}
+function themTB() {      
+      alert("Đã thêm thông báo thành công!");
+      dongForm();
+    }
+    </script>
 </body>
 </html>
