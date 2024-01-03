@@ -183,7 +183,7 @@ button {
 }
 
 .overview .metric {
-  width: 30%;
+  
   padding: 20px;
   text-align: center;
   background-color: #5b5b5b;
@@ -193,6 +193,7 @@ button {
   margin-right: 10px;
   opacity: 0.7;
   margin: 15px;
+  overflow-y: auto;
 }
 .overview .metric:last-child {
   margin-right: 0;

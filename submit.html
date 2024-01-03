@@ -56,12 +56,15 @@ label {
   <input type="file" id="bankQR" class="upload">
 
   <button onclick="saveInfo()">Lưu thông tin</button>
-  <a href="index.html">Quay lại</a>
+  <a href="javascript: void(0);" onclick="goBack()">Quay lại</a>
 
 </form>
 </div>
 
 <script>
+  function goBack() {
+    window.history.back();
+  }
   function saveInfo() {
     alert("Lưu thông tin thành công!");
   }  

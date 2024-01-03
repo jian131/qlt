@@ -84,8 +84,8 @@ if (id) {
         <ul class="menu">
           <li><a href="">Trang chủ</a></li>
           <li><a href="rooms.html?id=201">Thông tin phòng trọ</a></li>
-          <li><a href="notifications-tenant.html">Thông báo</a></li>
-          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="host-info.html">Liên hệ chủ trọ</a></li>
+          <li><a href="finance-tenant.html">Đóng tiền</a></li>
           <li><a href="index.html">Đăng xuất</a></li>
         </ul>
     </div>
@@ -114,13 +114,14 @@ if (id) {
         <ul class="menu">
           <li><a href="">Trang chủ</a></li>
           <li><a href="rooms.html?id=302">Thông tin phòng trọ</a></li>
-          <li><a href="notifications-tenant.html">Thông báo</a></li>
-          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="host-info.html">Liên hệ chủ trọ</a></li>
+          <li><a href="finance-tenant.html">Đóng tiền</a></li>
           <li><a href="index.html">Đăng xuất</a></li>
         </ul>
     </div>
     <div class="content">
         <div class="overview"> <div class="metric"> 
+          <h3>Bảng thông báo</h3>
           <h4 style="font-size: 20px; color:black; font-weight: bold;">Xin chào Hoàng Văn Cường!</h4> 
           <div class="details" style="font-size: 18px; font-weight: bold;"> 
             Phòng của bạn đang gặp sự cố mất điện kéo dài. Chúng tôi đang nỗ lực khắc phục. Rất mong bạn thông cảm trong thời gian này. 
@@ -136,7 +137,8 @@ if (id) {
 } else {
   $("#tenantInfo").html(`
   <div class="input-container">
-    <input type="text" id="idInput" placeholder="Nhập mã phòng"> 
+    <input type="text" id="idInput" placeholder="Nhập mã trọ">
+    <input type="text" id="idInput" placeholder="Nhập số phòng"> 
     <button onclick="goToId()">Truy cập</button>
       <div class="link-btn">
       <a href="index.html">Quay lại</a>
@@ -146,7 +148,7 @@ if (id) {
   
   function goToId() {
     var inputId = $("#idInput").val();
-    window.location.href = "tenant.html?id=" + inputId; 
+    window.location.href = "tenant.html?id=hvc123"; 
   }
 
   function back(){
