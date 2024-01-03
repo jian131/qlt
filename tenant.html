@@ -45,6 +45,18 @@ button {
   color: #fff; 
   text-decoration: none;
 }
+.input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#idInput {
+  display: block;
+  margin: 0 auto 10px;  
+}
   </style>
 
 </head>
@@ -108,15 +120,13 @@ if (id) {
         </ul>
     </div>
     <div class="content">
-      <center>
-          <h3>Khu trọ B</h3>
-        </center>
-    <div class="overview">
-      <div class="metric">
-        <h4>Hi! Hoàng Văn Cường</h4> 
-        <div class="details">Phòng bạn bị mất điện vô thời hạn</div>
-      </div>
-    </div>
+        <div class="overview"> <div class="metric"> 
+          <h4 style="font-size: 20px; color:black; font-weight: bold;">Xin chào Hoàng Văn Cường!</h4> 
+          <div class="details" style="font-size: 18px; font-weight: bold;"> 
+            Phòng của bạn đang gặp sự cố mất điện kéo dài. Chúng tôi đang nỗ lực khắc phục. Rất mong bạn thông cảm trong thời gian này. 
+            </div> 
+            </div> 
+          </div>
     </div>
     </div>
   `);
@@ -125,11 +135,13 @@ if (id) {
   }
 } else {
   $("#tenantInfo").html(`
+  <div class="input-container">
     <input type="text" id="idInput" placeholder="Nhập mã phòng"> 
     <button onclick="goToId()">Truy cập</button>
       <div class="link-btn">
       <a href="index.html">Quay lại</a>
       </div>
+  </div>
   `);
   
   function goToId() {

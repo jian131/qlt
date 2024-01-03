@@ -10,7 +10,7 @@ $("#loginForm").submit(function(event) {
       window.location.href = "host.html";
   
     } else if(username == "hvc123" && password == "1234") { 
-      window.location.href = "tenant.html?id=hvc123";
+      window.location.href = "tenant.html";
     
     } else if(username == "bxs345" && password == "1234") {
       window.location.href = "tenant.html?id=bxs345";
