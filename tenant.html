@@ -17,6 +17,13 @@
   margin: 0 auto;
   display: block;
 }
+     #idInput2 {
+  width: 200px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+}
 button {
   width: 150px;
   margin: 10px auto;
@@ -138,7 +145,7 @@ if (id) {
   $("#tenantInfo").html(`
   <div class="input-container">
     <input type="text" id="idInput" placeholder="Nhập mã trọ">
-    <input type="text" id="idInput" placeholder="Nhập số phòng"> 
+    <input type="text" id="idInput2" placeholder="Nhập số phòng"> 
     <button onclick="goToId()">Truy cập</button>
       <div class="link-btn">
       <a href="index.html">Quay lại</a>
@@ -147,9 +154,16 @@ if (id) {
   `);
   
   function goToId() {
-    var inputId = $("#idInput").val();
-    window.location.href = "tenant.html?id=hvc123"; 
+  var inputId = $("#idInput").val();
+  var inputRoom = $("#idInput2").val();
+
+  if(inputId === "a" && inputRoom === "201") {
+    window.location.href = "tenant.html?id=hvc123";  
   }
+  else {
+    alert("Mã trọ hoặc số phòng không chính xác. Vui lòng nhập lại!");
+  }
+}
 
   function back(){
           history.back();
